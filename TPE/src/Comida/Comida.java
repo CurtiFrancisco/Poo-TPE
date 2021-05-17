@@ -1,7 +1,6 @@
 package Comida;
 
 public class Comida {
-	//hola
 	private String nombre;
 	private String tipo;
 	private String modo_preparacion;
