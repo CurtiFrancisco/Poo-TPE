@@ -2,7 +2,7 @@ package Comida;
 
 public class Comida {
 	private String nombre;
-
+	//HOla tobi
 	private String tipo;
 	private String modo_preparacion;
 	private double calorias;
