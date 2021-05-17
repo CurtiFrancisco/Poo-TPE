@@ -3,6 +3,7 @@ package Comida;
 public class Comida {
 	private String nombre;
 	//HOla tobi
+	//Seguimos probando
 	private String tipo;
 	private String modo_preparacion;
 	private double calorias;
