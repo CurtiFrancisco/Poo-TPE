@@ -1,5 +1,7 @@
 package Pregunta;
 
+import Comida.*;
+
 public class PreguntaAnd extends Pregunta {
 
 	private Pregunta p1;
@@ -12,9 +14,8 @@ public class PreguntaAnd extends Pregunta {
 	
 	
 	@Override
-	public boolean cumple() {
-		//return p1.cumple(f) && p2.cumple(f);
-		return false ; 
+	public boolean cumple(Comida f) {
+		return p1.cumple(f) && p2.cumple(f); 
 	}
 
 }
