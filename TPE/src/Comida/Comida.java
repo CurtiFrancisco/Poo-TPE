@@ -32,7 +32,10 @@ public class Comida {
 		return tiempo;
 	}	
 	
-	
+	public Comida copyOf() {
+		Comida c1 = new Comida(this.nombre,this.tipo,this.modo_preparacion) ; 
+		return c1 ; 
+	}
 	
 	
 	

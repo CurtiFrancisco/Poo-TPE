@@ -16,7 +16,13 @@ public class Pedido {
 		this.mozo = mozo;
 	}
 	public ArrayList<Comida> getComidas() {
-		return comidas;
+		
+		ArrayList<Comida> aux = new ArrayList<>();
+		for (Comida c1 : comidas) {
+			Comida aux_comida = c1.copyOf() ; 
+			aux.add(aux_comida) ; 
+		}
+		return aux;
 	}
 	public int getMesa() {
 		return mesa;
@@ -34,6 +40,5 @@ public class Pedido {
 			this.comidas.add(comidaModificada);
 		}
 	}
-	
 	
 }
