@@ -23,24 +23,25 @@ public abstract class Comida {
 	public String getModo_preparacion() {
 		return modo_preparacion;
 	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public void setModo_preparacion(String modo_preparacion) {
+		this.modo_preparacion = modo_preparacion;
+	}
+
 	public abstract double getCalorias() ;
 	public abstract float getPrecio() ; 
 	public abstract int getTiempo() ;
 	public abstract Comida copyOf() ;
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((modo_preparacion == null) ? 0 : modo_preparacion.hashCode());
-		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
-		result = prime * result + ((tipo == null) ? 0 : tipo.hashCode());
-		return result;
-	}
-
-	@Override
 	public boolean equals(Object obj) {
-		
 		try {
 			
 			Comida c1 = (Comida) obj ;
@@ -51,8 +52,7 @@ public abstract class Comida {
 			
 		} catch(Exception e) {
 			return false ; 
-		}
-		
+		}	
 	} 
 	
 	

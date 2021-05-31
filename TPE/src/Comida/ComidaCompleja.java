@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 public class ComidaCompleja extends Comida{
 	
-
 	private ArrayList<Comida> conjuntoComidas;
 	
 	public ComidaCompleja(String nombre, String tipo, String modo_preparacion) {
@@ -17,7 +16,7 @@ public class ComidaCompleja extends Comida{
 		this.conjuntoComidas.addAll(comidas) ;
 	}
 		
-	public void addComidaSimple(ComidaSimple comida) {
+	public void addComida(Comida comida) {
 		if (!this.conjuntoComidas.contains(comida)) {
 			this.conjuntoComidas.add(comida);
 		}
@@ -26,8 +25,13 @@ public class ComidaCompleja extends Comida{
 
 	@Override
 	public Comida copyOf() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		ComidaCompleja aux = new ComidaCompleja(super.getNombre(),super.getTipo(),super.getModo_preparacion()) ; 
+
+		for (Comida c : conjuntoComidas) {
+			aux.addComida(c.copyOf());
+		}
+		return aux;
 	}
 
 	@Override

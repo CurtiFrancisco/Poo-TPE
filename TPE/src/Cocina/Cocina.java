@@ -8,18 +8,16 @@ public class Cocina {
 	private ArrayList<Estacion> listaEstacion;
 	private Estacion _default ; 
 	
-	
-	public void AsignarComidaEstacion(Comida c) {
-
-		boolean asignado = false ; 
+	public boolean AsignarComidaEstacion(Comida c) {
+ 
 		for (Estacion e : listaEstacion) {
 			if (e.puedePreparar(c)) {
-				asignado = true ; 
 				e.asignar(c) ;
-				break; 
+				return true; 
 			}
 		}
 		_default.asignar(c); //asignamos la comida a la estacion default 
+		return false ; 
 	}
 	
 	public void AsignarPedidos() {
