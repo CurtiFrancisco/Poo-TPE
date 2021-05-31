@@ -1,11 +1,13 @@
 package Comida;
 
 public class ComidaSimple extends Comida{
+	
 	private double calorias;
-	private double precio;
+	private float precio;
 	private int tiempo;
-
-	public ComidaSimple(String nombre, String tipo, String modo_preparacion, double calorias, double precio,
+	
+	
+	public ComidaSimple(String nombre, String tipo, String modo_preparacion, double calorias, float precio,
 			int tiempo) {
 		super(nombre,tipo,modo_preparacion);
 		this.calorias = calorias;
@@ -18,10 +20,10 @@ public class ComidaSimple extends Comida{
 	public void setCalorias(double calorias) {
 		this.calorias = calorias;
 	}
-	public double getPrecio() {
+	public float getPrecio() {
 		return precio;
 	}
-	public void setPrecio(double precio) {
+	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
 	public int getTiempo() {
@@ -29,6 +31,13 @@ public class ComidaSimple extends Comida{
 	}
 	public void setTiempo(int tiempo) {
 		this.tiempo = tiempo;
+	}
+	@Override
+	public Comida copyOf() {
+		ComidaSimple c = new ComidaSimple(this.getNombre(),this.getTipo(),
+										  this.getModo_preparacion(), this.getCalorias(),
+										  this.getPrecio(),this.getTiempo()) ; 
+		return c;
 	}
 		
 	

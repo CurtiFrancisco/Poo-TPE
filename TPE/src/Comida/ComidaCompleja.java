@@ -2,52 +2,65 @@ package Comida;
 import java.util.ArrayList;
 
 public class ComidaCompleja extends Comida{
-	private double calorias;
-	private double precio;
-	private int tiempo;
-	private ArrayList<ComidaSimple>	conjuntoComidas;
+	
+
+	private ArrayList<Comida> conjuntoComidas;
 	
 	public ComidaCompleja(String nombre, String tipo, String modo_preparacion) {
 		super(nombre,tipo,modo_preparacion);
 		this.conjuntoComidas = new ArrayList<>();
-		this.calorias = 0 ;
-		this.precio = 0;
-		this.tiempo = 0;
 	}
-	public ComidaCompleja(String nombre, String tipo, String modo_preparacion, ArrayList<ComidaSimple> comidasSimples) {
+	
+	public ComidaCompleja(String nombre, String tipo, String modo_preparacion, ArrayList<Comida> comidas) {
 		super(nombre,tipo,modo_preparacion);
 		this.conjuntoComidas = new ArrayList<>();
-		//this.conjuntoComidas = comidasSimples;
-		for (ComidaSimple comida : comidasSimples ){
-				this.conjuntoComidas.add(comida);
-				this.calorias += comida.getCalorias();
-				this.precio += comida.getPrecio();
-				this.tiempo += comida.getTiempo();			//Lo mismo que hiciste al agregar
-		 }
+		this.conjuntoComidas.addAll(comidas) ;
 	}
 		
 	public void addComidaSimple(ComidaSimple comida) {
 		if (!this.conjuntoComidas.contains(comida)) {
 			this.conjuntoComidas.add(comida);
-			this.calorias +=comida.getCalorias();
-			this.precio +=comida.getPrecio();
-			this.tiempo +=comida.getTiempo();
 		}
 	}
+	
+
+	@Override
+	public Comida copyOf() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
 	public double getCalorias() {
-		return calorias;
+		double aux = 0 ; 
+		
+		for (Comida c : conjuntoComidas) {
+			aux += c.getCalorias() ; 
+		}
+		
+		return aux;
 	}
 
-	public double getPrecio() {
-		return precio;
+	@Override
+	public float getPrecio() {
+		float aux = 0 ; 
+		
+		for (Comida c : conjuntoComidas) {
+			aux += c.getCalorias() ; 
+		}
+		
+		return aux;
 	}
 
+	@Override
 	public int getTiempo() {
-		return tiempo;
-	}
-
-	public ArrayList<ComidaSimple> getConjunto_comidas() {
-		return conjuntoComidas; //Cambiar esto.
+		int aux = 0 ; 
+		
+		for (Comida c : conjuntoComidas) {
+			aux += c.getCalorias() ; 
+		}
+		
+		return aux;
 	}
 
 }
