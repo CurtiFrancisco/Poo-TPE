@@ -1,20 +1,30 @@
 package Pregunta;
 
+import java.util.ArrayList;
+
 import Comida.*;
 
 public class PreguntaOr extends Pregunta {
 
-	private Pregunta p1 ; 
-	private Pregunta p2 ; 
+	private ArrayList<Pregunta> preguntas ; 
 	
 	public PreguntaOr(Pregunta p1, Pregunta p2) {
-		this.p1 = p1; 
-		this.p2 = p2; 
+		preguntas.add(p1) ; 
+		preguntas.add(p2) ; 
 	}
+	
+	public void addPregunta( Pregunta p) {
+		preguntas.add(p) ; 
+	}
+	
 	
 	@Override
 	public boolean cumple(Comida f) {
-		return p1.cumple(f) || p2.cumple(f) ; 
+		for (Pregunta p : preguntas) {
+			if (p.cumple(f))
+				return true ; 
+		}
+		return false;
 	}
 
 }
