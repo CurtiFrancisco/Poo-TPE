@@ -46,8 +46,8 @@ public class Pedido {
 	
 	/* Para cada comida del pedido, se calcula su valor si cumple una condicion o no
 	 * para arreglar este problema creamos una clase preguntaConValor que tiene ademas del metodo
-	 * cumplir un metodo que devuelve el valor númerico. La cocina puede definir la lista de preguntas que quiera
-	 * y en base a esas se calcula el precio*/
+	 * cumplir un metodo que devuelve el valor númerico. La cocina puede definir la lista de 
+	 * preguntas que quiera y en base a esas se calcula el precio*/
 	
 	
 	public double calcularCuenta(boolean agitado, ArrayList<PreguntaConValor> criterio) {
@@ -61,7 +61,9 @@ public class Pedido {
 				aux += c.getPrecio() ; 
 			}
 		}
-			
+		
+		// Preguntar si esta mal así o creamos la clase pregunta con porcentaje 
+		
 		aux += aux * PROPINA ; //Valor definido para mozos
 		
 		if (agitado)
