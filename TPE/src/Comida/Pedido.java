@@ -53,7 +53,7 @@ public class Pedido {
 	public double calcularCuenta(boolean agitado, ArrayList<PreguntaConValor> criterio) {
 		double aux = 0 ; 
 		
-		
+		CalculadorAdicional c = new CalculadorAdicional();
 		
 		for( PreguntaConValor p : criterio) {
 			for( Comida c : comidas) {
