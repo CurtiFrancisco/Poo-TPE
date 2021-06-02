@@ -1,3 +1,5 @@
+
+/*
 package Pregunta;
 
 import Comida.Comida;
@@ -30,3 +32,4 @@ public class PreguntaConValor extends Pregunta {
 	
 	
 }
+*/
