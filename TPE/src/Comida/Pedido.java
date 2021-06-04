@@ -8,12 +8,8 @@ import Pregunta.*;
 public class Pedido {
 	private ArrayList<Comida> comidas;
 	private int mesa;
-	private String mozo;
-	private int diaSemana ; /*Numero de 0 a 6 que define en que dia de la semana se hizo el pedido, se usa para el calculo de la cuenta*/						
+	private String mozo;						
 
-	//private static final double PROPINA = 0.1 ;  
-	//private static final double AGITADO = 0.55 ;  
-	//private static final double DESCUENTO = 0.20 ;
 	
 	public Pedido(int mesa, String mozo) {
 		super();
