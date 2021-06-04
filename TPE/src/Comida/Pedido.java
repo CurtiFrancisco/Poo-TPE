@@ -50,7 +50,7 @@ public class Pedido {
 		
 		for( Calculador c : criterio) {
 			for( Comida aux : comidas) {
-				 precio += c.calcularPrecio(aux) ;
+				 precio += aux.getPrecio() + c.calcularPrecio(aux) ;
 			}
 		}
 		

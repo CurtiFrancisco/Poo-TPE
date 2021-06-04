@@ -5,37 +5,26 @@ import Pregunta.Pregunta;
 
 public class CalculadorPorcentaje extends Calculador {
 
-	/* Implementamos esta clase que trabaja con porcentajes y un booleano que sirve como criterio
-	 * creemos que es mejor así dado que "concepto de dia agitado" "propina de mosos" y 
-	 * "descuento los dias miercoles" son las unicas situaciones donde se aplican costos o descuentos
-	 * lo manejamos con un booleano desde afuera que se puede setear de forma tal que una persona
-	 * para usar esta clase debe crear un CalculadorPorcentaje DIAAGITADO y poner el valor que quiere
-	 * puede armar una lista de estos criterios y funcionarian bien con los que son con valores fijos*/
+	private double valor1 ;   
 	
 	
-
-	private double valor1 ; 
-	private boolean p ;  
-	
-	public CalculadorPorcentaje( double valor1, boolean p) {
+	public CalculadorPorcentaje( double valor1) {
 		
 		this.valor1 = valor1 ; 
-		this.p = p ; 
-	}
-	
-	
-	public void setEstado(boolean b) {
-		this.p = b ; 
 	}
 
+
 	@Override
-	public double calcularPrecio(Comida c) {
-		
-		if (p)	
-			return (c.getPrecio() + c.getPrecio() * valor1 );
-		return c.getPrecio();
+	public double calcularPrecio(Comida c) {	
+		return (c.getPrecio() * valor1 );
 	}
-	
+
+//	public double calcularPrecio(Comida comida) {
+//		
+//		if (c.cumple())	
+//			return (p.calcularPrecio() * valor1 );
+//		return 0;
+//	}
 	
 	
 	

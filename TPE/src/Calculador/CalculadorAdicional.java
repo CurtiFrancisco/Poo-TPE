@@ -18,8 +18,8 @@ public class CalculadorAdicional extends Calculador {
 		
 	public double calcularPrecio(Comida c){
 		if (p.cumple(c))
-			return c.getPrecio() + valor1 ; 
-		return c.getPrecio() + valor2 ; 
+			return /*c.getPrecio() + */ valor1 ; 
+		return /*c.getPrecio() + */ valor2 ; 
 	}
 	
 	
