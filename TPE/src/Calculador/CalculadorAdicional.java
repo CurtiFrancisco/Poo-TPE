@@ -15,11 +15,6 @@ public class CalculadorAdicional extends Calculador {
 		this.p = p ; 
 	}
 	
-	public CalculadorAdicional( double valor1, double valor2, boolean b) {
-		this.valor1 = valor1 ; 
-		this.valor2 = valor2 ; 
-	}
-	
 		
 	public double calcularPrecio(Comida c){
 		if (p.cumple(c))
