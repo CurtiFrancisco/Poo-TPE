@@ -19,13 +19,5 @@ public class CalculadorPorcentaje extends Calculador {
 		return (c.getPrecio() * valor1 );
 	}
 
-//	public double calcularPrecio(Comida comida) {
-//		
-//		if (c.cumple())	
-//			return (p.calcularPrecio() * valor1 );
-//		return 0;
-//	}
-	
-	
 	
 }

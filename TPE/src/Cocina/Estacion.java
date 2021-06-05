@@ -9,7 +9,6 @@ public class Estacion {
 	private Pregunta especialidad ; 
 		
 	public Estacion() {
-		super();
 		this.comidaAtendida = new ArrayList<>() ; 
 	}
 

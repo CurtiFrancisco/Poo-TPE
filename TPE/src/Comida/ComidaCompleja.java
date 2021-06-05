@@ -10,11 +10,6 @@ public class ComidaCompleja extends Comida{
 		this.conjuntoComidas = new ArrayList<>();
 	}
 	
-	//public ComidaCompleja(String nombre, String tipo, String modo_preparacion, ArrayList<Comida> comidas) {
-	//	super(nombre,tipo,modo_preparacion);
-	//	this.conjuntoComidas = new ArrayList<>();
-	//	this.conjuntoComidas.addAll(comidas) ;
-	//}
 		
 	public void addComida(Comida comida) {
 		if (!this.conjuntoComidas.contains(comida)) { //preguntar
